@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "Allow ssh inbound traffic"
-  vpc_id      = [vpcid]
+  vpc_id      = module.Network_Module.vpc_id
 #InBound
   ingress {
     description      = "ssh from VPC"
@@ -26,7 +26,7 @@ resource "aws_security_group" "allow_ssh" {
 resource "aws_security_group" "allow_tcp_ssh" {
   name        = "allow_TCP_SSH"
   description = "Allow TCP on port 3000 & SSH inbound traffic"
-  vpc_id      = [vpcid]
+  vpc_id      = module.Network_Module.vpc_id
 
   ingress {
     description      = "ssh from all"

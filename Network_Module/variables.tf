@@ -15,7 +15,4 @@ variable "private_subnet_cidr" {
   type = string
 }
 
-variable "vpcid" {
-  type = string
-}
 
