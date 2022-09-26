@@ -1,6 +1,6 @@
 variable "region" {
-    type = string
-  
+  type = string
+
 }
 
 variable "vpc_cidr" {
