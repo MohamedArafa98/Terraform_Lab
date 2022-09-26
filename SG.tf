@@ -23,7 +23,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-resource "aws_security_group" "allow_tcp_ssh" {
+resource "aws_security_group" "allow_http_ssh" {
   name        = "allow_TCP_SSH"
   description = "Allow TCP on port 3000 & SSH inbound traffic"
   vpc_id      = module.Network_Module.vpc_id
